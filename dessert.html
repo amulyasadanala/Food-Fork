@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.css">
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="icon" href="images/fork-knife.svg" type="image/svg+xml">
+    <title>Dessert</title>
+</head>
+<style>
+    img{
+        width:377px;
+        height: 250px;
+    }
+    .card:hover{
+            transform: scale(1.1,1.1);
+            transition: all 0.3s linear;
+        }
+        .card{
+            overflow: hidden;
+        }
+        #logo{
+    font-size: 35px;
+    font-weight: bold;
+   }
+   #items{
+    margin-top: 40px;
+   }
+</style>
+<body>
+    <!-- header section -->
+   <header class="bg-warning text-white d-flex justify-content-between py-3 aligns-items-center ">
+    <div id="logo">
+      <p><i class="bi bi-fork-knife"></i> Fork & Fun</p>
+    </div>
+    <div>
+      <input type="search" placeholder="Search Recipe" class="px-2 py-2 fs-5 mt-2 rounded border-0">
+      <button class="btn bg-white btn-warning px-2 py-2 fs-5" data-bs-target="#loginmodal" data-bs-toggle="modal">Login</button>
+      <button class="btn bg-white btn-warning px-2 py-2 fs-5" >WishList</button>
+    </div>
+   
+   <div class="modal" id="loginmodal">
+    <div class="modal-dialog modal-dialog-center">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="text-primary">Enter login details</h4>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <label class="form-label">Username</label>
+            </div>
+            <div class="col-lg-8">
+              <input type="text" placeholder="Username" class="form-control">
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col-lg-4">
+              <label class="form-label">Password</label>
+            </div>
+            <div class="col-lg-8">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+          </div>
+          <button class="btn btn-success">Login</button>          
+        </div>
+      </div>
+    </div>
+   </div>
+   </header>
+<!-- navbar -->
+    <nav class="navbar navbar-expand-sm " style="background-color: #694e26;" data-bs-theme="dark">
+      <div class="container-fluid">
+        <!-- <div>
+        <a href="home.html" class="navbar-brand fs-5 fw-bold">Food & Fork</a>
+      </div> -->
+      <ul class="navbar-nav  w-100 justify-content-evenly"  >
+        <li class="me-2">
+          <a href="home.html" class="text-decoration-none text-white fs-4">Home</a>
+        </li>
+        <li class="me-2">
+          <a href="breakfast.html" class="text-decoration-none text-white fs-4">BreakFast</a>
+        </li>
+        <li class="me-2">
+          <a href="lunch.html" class="text-decoration-none text-white fs-4">Lunch</a>
+        </li class="me-2">
+        <li class="me-2">
+          <a href="dinner.html" class="text-decoration-none text-white fs-4">Dinner</a>
+        </li>
+        <li class="me-2">
+          <a href="dessert.html" class="text-decoration-none text-white fs-4" >Dessert</a>
+        </li>
+        <li class="me-2">
+          <a href="nutrition&fit.html" class="text-decoration-none text-white fs-4">Nutrition & Fit</a>
+        </li>
+        <li class="me-2">
+          <a href="popular.html" class="text-decoration-none text-white fs-4">Popular </a>
+        </li>
+        <li class="me-2">
+          <a href="seasonal.html" class="text-decoration-none text-white fs-4">Seasonal</a>
+        </li>
+      </ul>
+      </div>
+      <!-- <button class="navbar-toggler">
+              <span class="navbar-toggler-icon"></span>
+              <//button> -->
+
+    </nav>
+   
+
+
+
+    <!-- Recipe cards -->
+   <div id="items">
+     <div class="d-flex ">
+        <div class="card shadow w-25 h-100 mb-30 m-auto" >
+        <img src="images/Gajar-Ka-Halwa.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Gajar ka Halwa</h4>
+            <span class="text-secondary ">Sweet carrot pudding with ghee & nuts.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>40 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#gajar" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25 mb-30 m-auto" >
+        <img src="images/Gulab Jamun.webp" class="car-img-top">
+        <div class="card-body">
+            <h4>Gulab Jamun</h4>
+            <span class="text-secondary "> Soft fried dumplings soaked in sugar syrup.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>30 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#gulab" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25 mb-30 m-auto" >
+        <img src="images/Kheer.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Kheer</h4>
+            <span class="text-secondary "> Creamy rice pudding with cardamom.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>35 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#kheer" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    </div>
+    <br><br><br>
+    <div class="d-flex ">
+        <div class="card shadow w-25 h-100  m-auto" >
+        <img src="images/Rasgulla.webp" class="car-img-top">
+        <div class="card-body">
+            <h4>Rasgulla</h4>
+            <span class="text-secondary ">Soft cottage cheese balls in light syrup.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>40 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#rasgulla" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25  m-auto" >
+        <img src="images/Aam Ras.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Aam Ras</h4>
+            <span class="text-secondary "> Sweet mango pulp .</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>10 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#aam" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25  m-auto" >
+        <img src="images/Pumpkin Halwa.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Pumpkin Halwa</h4>
+            <span class="text-secondary "> Sweet pumpkin dessert</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>30 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#pumphalwa" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    </div>
+    <br><br><br>
+    <div class="d-flex ">
+        <div class="card shadow w-25 h-100  m-auto" >
+        <img src="images/Dates & Nuts Ladoo.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Dates & Nuts Ladoo </h4>
+            <span class="text-secondary ">-No-sugar energy balls.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>15 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#dates" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25  m-auto" >
+        <img src="images/Fruit Custard with Jaggery.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Fruit Custard with Jaggery</h4>
+            <span class="text-secondary "> Mixed fruits in creamy custard.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>20 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#custard" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25  m-auto" >
+        <img src="images/Dry Fruit Barfi.webp" class="car-img-top">
+        <div class="card-body">
+            <h4>Dry Fruit Barfi</h4>
+            <span class="text-secondary ">Nutritious fudge with dry fruits.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>25 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#barfi" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    </div>
+   </div>
+    <!-- Recipe models -->
+     <div class="modal fade" id="gajar">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Gajar ka Halwa</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Carrots</li><li>milk</li><li>sugar</li><li> ghee</li><li>nuts</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>  Grate carrots</li><li> Cook in milk till soft</li><li> Add sugar & ghee</li><li>Simmer till thick, garnish with nuts</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+       <div class="modal fade" id="gulab">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Gulab Jamun</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Khoya or milk powder </li><li>Flour</li><li>Sugar</li><li> Cardamom</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Knead dough</li><li> Make balls</li><li>Fry golden</li><li>  Soak in sugar syrup</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <div class="modal fade" id="kheer">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Kheer</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Rice </li><li>Milk</li><li>Sugar</li><li> Cardamom</li><li>Nuts</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Boil milk</li><li>Add rice & cook till creamy</li><li> Add sugar & cardamom, garnish</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+      <div class="modal fade" id="rasgulla">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Rasgulla</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Milk </li><li>Lemon juice</li><li> Sugar</li><li>Water</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Curdle milk</li><li> Drain & knead paneer</li><li>Make balls</li><LI>Cook in sugar syrup till spongy</LI>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="aam">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Aam Ras</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>  Ripe mangoes</li><li>sugar</li><li> cardamom</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Blend mango pulp with sugar & cardamom</li><li> Chill & serve</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="pumphalwa">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Pumpkin Halwa</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Pumpkin</li><li>Sugar</li><li> Ghee</li><li> Cardamom</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Grate pumpkin</li><li>Cook with ghee & sugar till soft</li><li> Add cardamom</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="dates">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Dates & Nuts Ladoo </h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Dates </li><li>almonds</li><li> cashews</li><li> ghee</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li> Blend dates & nuts</li><li> heat slightly with ghee</li><li> shape into ladoos</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="custard">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Fruit Custard with Jaggery</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Milk</li><li>Custard powder</li><li>  Jaggery</li><li> Mixed fruits</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Make custard with milk & jaggery</li><li>   cool & mix with chopped fruits.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="barfi">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Dry Fruit Barfi</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Cashew  </li><li> Almonds</li><li> Dates</li><li>Cardamom</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Grind dry fruits</li><li> Cook with ghee</li><li> Spread on tray & cut into pieces</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+
+    
+</body>
+</html>

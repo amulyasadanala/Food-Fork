@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.css">
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="icon" href="images/fork-knife.svg" type="image/svg+xml">
+    <title>Popular Dishes</title>
+</head>
+<style>
+    img{
+        width:377px;
+        height: 250px;
+    }
+    .card:hover{
+            transform: scale(1.1,1.1);
+            transition: all 0.3s linear;
+        }
+    .card{
+            overflow: hidden;
+        }
+        #logo{
+    font-size: 35px;
+    font-weight: bold;
+   }
+   #items{
+    margin-top: 40px;
+   }
+</style>
+<body>
+    <!-- header section -->
+   <header class="bg-warning text-white d-flex justify-content-between py-3 aligns-items-center ">
+    <div id="logo">
+      <p><i class="bi bi-fork-knife"></i> Fork & Fun</p>
+    </div>
+    <div>
+      <input type="search" placeholder="Search Recipe" class="px-2 py-2 fs-5 mt-2 rounded border-0">
+      <button class="btn bg-white btn-warning px-2 py-2 fs-5" data-bs-target="#loginmodal" data-bs-toggle="modal">Login</button>
+      <button class="btn bg-white btn-warning px-2 py-2 fs-5" >WishList</button>
+    </div>
+   
+   <div class="modal" id="loginmodal">
+    <div class="modal-dialog modal-dialog-center">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="text-primary">Enter login details</h4>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <label class="form-label">Username</label>
+            </div>
+            <div class="col-lg-8">
+              <input type="text" placeholder="Username" class="form-control">
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col-lg-4">
+              <label class="form-label">Password</label>
+            </div>
+            <div class="col-lg-8">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+          </div>
+          <button class="btn btn-success">Login</button>          
+        </div>
+      </div>
+    </div>
+   </div>
+   </header>
+<!-- navbar -->
+    <nav class="navbar navbar-expand-sm " style="background-color: #694e26;" data-bs-theme="dark">
+      <div class="container-fluid">
+        <!-- <div>
+        <a href="home.html" class="navbar-brand fs-5 fw-bold">Food & Fork</a>
+      </div> -->
+      <ul class="navbar-nav  w-100 justify-content-evenly"  >
+        <li class="me-2">
+          <a href="home.html" class="text-decoration-none text-white fs-4">Home</a>
+        </li>
+        <li class="me-2">
+          <a href="breakfast.html" class="text-decoration-none text-white fs-4">BreakFast</a>
+        </li>
+        <li class="me-2">
+          <a href="lunch.html" class="text-decoration-none text-white fs-4">Lunch</a>
+        </li class="me-2">
+        <li class="me-2">
+          <a href="dinner.html" class="text-decoration-none text-white fs-4">Dinner</a>
+        </li>
+        <li class="me-2">
+          <a href="dessert.html" class="text-decoration-none text-white fs-4" >Dessert</a>
+        </li>
+        <li class="me-2">
+          <a href="nutrition&fit.html" class="text-decoration-none text-white fs-4">Nutrition & Fit</a>
+        </li>
+        <li class="me-2">
+          <a href="popular.html" class="text-decoration-none text-white fs-4">Popular </a>
+        </li>
+        <li class="me-2">
+          <a href="seasonal.html" class="text-decoration-none text-white fs-4">Seasonal</a>
+        </li>
+      </ul>
+      </div>
+      <!-- <button class="navbar-toggler">
+              <span class="navbar-toggler-icon"></span>
+              <//button> -->
+
+    </nav>
+   
+    <!-- Recipe cards -->
+     <div id="items">
+        <div class="d-flex ">
+        <div class="card shadow w-25 h-100 mb-30 m-auto" >
+        <img src="images/poha.webp" class="car-img-top">
+        <div class="card-body">
+            <h4>Poha</h4>
+            <span class="text-secondary ">Light flattened rice cooked with onions & peas.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>20 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#poha" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25 mb-30 m-auto" >
+        <img src="images/idli.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Idli & Sambar</h4>
+            <span class="text-secondary "> Soft steamed rice cakes with tangy lentil soup.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>30 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#idli" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25 mb-30 m-auto" >
+        <img src="images/paratha.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Aloo Paratha with Curd</h4>
+            <span class="text-secondary "> Stuffed potato flatbread served with yogurt.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>25 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#paratha" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    </div>
+    <br><br><br>
+     <div class="d-flex ">
+        <div class="card shadow w-25 h-100 mb-30 m-auto" >
+        <img src="images/daltadka.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Dal Tadka + Jeera Rice</h4>
+            <span class="text-secondary ">Yellow lentils with spices, served with cumin rice.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>30 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#tadka" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25 mb-30 m-auto" >
+        <img src="images/PaneerButterMasala_Roti.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Paneer Butter Masala + Roti</h4>
+            <span class="text-secondary "> Creamy tomato curry with cottage cheese.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>35 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#paneer" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25 mb-30 m-auto" >
+        <img src="images/Rajma_Chawal.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Rajma Chawal</h4>
+            <span class="text-secondary "> -Kidney beans curry with steamed rice.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>40 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#rajma" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    </div>
+    <br><br><br>
+    <div class="d-flex ">
+        <div class="card shadow w-25 h-100 mb-30 m-auto" >
+        <img src="images/Chapati_ Mixed Veg Curry.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Chapati with Mixed Veg Curry</h4>
+            <span class="text-secondary ">Soft rotis served with a mild vegetable curry.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>25 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#veg" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25 mb-30 m-auto" >
+        <img src="images/Tandoori Roti.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Tandoori Roti with Dal Makhani</h4>
+            <span class="text-secondary "> Smoky flatbread with creamy black lentils.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>40 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#tandoori" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25 mb-30 m-auto" >
+        <img src="images/lemonrice.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Lemon Rice with Papad</h4>
+            <span class="text-secondary "> Zesty lemon-flavored rice with crispy papad.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>20 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#lemon" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    </div>
+    <br><br><br>
+    <div class="d-flex ">
+        <div class="card shadow w-25 h-100 mb-30 m-auto" >
+        <img src="images/Gajar-Ka-Halwa.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Gajar ka Halwa</h4>
+            <span class="text-secondary ">Sweet carrot pudding with ghee & nuts.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>40 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#gajar" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25 mb-30 m-auto" >
+        <img src="images/Gulab Jamun.webp" class="car-img-top">
+        <div class="card-body">
+            <h4>Gulab Jamun</h4>
+            <span class="text-secondary "> Soft fried dumplings soaked in sugar syrup.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>30 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#gulab" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25 mb-30 m-auto" >
+        <img src="images/Kheer.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Kheer</h4>
+            <span class="text-secondary "> Creamy rice pudding with cardamom.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>35 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#kheer" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    </div>
+     </div>
+    <!-- Recipe models -->
+     <div class="modal fade" id="poha">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Poha</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Flattened rice</li><li>onion</li><li>green chili</li><li> curry leaves</li><li>peas</li> <li>peanuts</li> <li>turmeric</li><li>lemon.</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Rinse poha</li><li> Sauté onion & chili with curry leaves</li><li>Add peas & peanuts, mix poha & turmeric</li><li>Cook 3 mins, add lemon.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+       <div class="modal fade" id="idli">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Idli & Sambar</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Idli batter </li><li>toor dal</li><li>tamarind</li><li> sambar powder</li><li>veggies</li> <li>curry leaves</li> 
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Steam idlis</li><li> Boil dal</li><li>Add tamarind & sambar powder with veggies</li><li> Temper with curry leaves</li><li> Serve hot.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <div class="modal fade" id="paratha">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Aloo Paratha with Curd </h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Wheat dough </li><li>boiled potatoes</li><li> spices</li><li> coriander</li><li>ghee</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Stuff dough with spiced potatoes</li><li> Roll into paratha</li><li> Cook on tawa with ghee</li><li>  Serve with curd & pickle</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="tadka">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Dal Tadka + Jeera Rice</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Toor dal</li><li>Onion</li><li> tomato</li><li> Garlic</li><li> Ghee</li> <li>Cumin</li> <li> Rice</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Cook dal</li><li>  Make tadka with ghee & spices</li><li>Add to dal</li><li> Cook rice with cumin seeds</li><li>Serve</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+       <div class="modal fade" id="paneer">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Paneer Butter Masala + Roti</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>  Paneer</li><li>Tomato puree</li><li>Cream, butter</li><li> Spices</li><li> Wheat flour</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Cook tomato gravy with spices & cream</li><li> Add paneer & simmer</li><li> Make rotis from wheat dough</li><li> Serve together.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <div class="modal fade" id="rajma">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Rajma Chawal</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Soaked rajma</li><li>Boiled potatoes</li><li> Onion</li><li>Tomato</li><li>Ginger-garlic paste</li><li>Spices</li><li>Rice</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Pressure cook rajma</li><li> Sauté onion-tomato-spices</li><li>  Mix with rajma & simmer</li><li> Cook rice separately, serve.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="veg">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Chapati + Mixed Veg Curry</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Wheat flour</li><li>Onion</li><li>Tomato</li><li> Carrot</li><li>Beans</li> <li>Spices</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li> Knead dough</li><li> Cook rotis</li><li>Sauté veggies with onion-tomato & spices for curry</li><li>Serve hot and enjoy</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+       <div class="modal fade" id="tandoori">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Tandoori Roti + Dal Makhani</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Whole wheat </li><li>Black urad dal</li><li>Rajma</li><li> Cream</li><li>Butter</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Soak & cook dals</li><li> Sauté onion-tomato masala</li><li>Simmer with cream</li><li> Make tandoori rotis, serve</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <div class="modal fade" id="lemon">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Lemon Rice + Papad </h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Cooked rice </li><li>Lemon juice</li><li> Curry leaves</li><li> Green chili</li><li>Mustard</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Temper curry leaves & chili</li><li> Mix with rice & lemon juice</li><li> Serve with papad.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="gajar">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Gajar ka Halwa</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Carrots</li><li>milk</li><li>sugar</li><li> ghee</li><li>nuts</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>  Grate carrots</li><li> Cook in milk till soft</li><li> Add sugar & ghee</li><li>Simmer till thick, garnish with nuts</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+       <div class="modal fade" id="gulab">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Gulab Jamun</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Khoya or milk powder </li><li>Flour</li><li>Sugar</li><li> Cardamom</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Knead dough</li><li> Make balls</li><li>Fry golden</li><li>  Soak in sugar syrup</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <div class="modal fade" id="kheer">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Kheer</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Rice </li><li>Milk</li><li>Sugar</li><li> Cardamom</li><li>Nuts</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Boil milk</li><li>Add rice & cook till creamy</li><li> Add sugar & cardamom, garnish</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.css">
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="icon" href="images/fork-knife.svg" type="image/svg+xml">
+    <title>Seasonal</title>
+</head>
+<style>
+    img{
+        width:377px;
+        height: 250px;
+    }
+    .card:hover{
+            transform: scale(1.1,1.1);
+            transition: all 0.3s linear;
+        }
+        .card{
+            overflow: hidden;
+        }
+        #logo{
+    font-size: 35px;
+    font-weight: bold;
+   }
+   #items{
+    margin-top: 40px;
+   }
+</style>
+<body>
+    <!-- header section -->
+   <header class="bg-warning text-white d-flex justify-content-between py-3 aligns-items-center ">
+    <div id="logo">
+      <p><i class="bi bi-fork-knife"></i> Fork & Fun</p>
+    </div>
+    <div>
+      <input type="search" placeholder="Search Recipe" class="px-2 py-2 fs-5 mt-2 rounded border-0">
+      <button class="btn bg-white btn-warning px-2 py-2 fs-5" data-bs-target="#loginmodal" data-bs-toggle="modal">Login</button>
+      <button class="btn bg-white btn-warning px-2 py-2 fs-5" >WishList</button>
+    </div>
+   
+   <div class="modal" id="loginmodal">
+    <div class="modal-dialog modal-dialog-center">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="text-primary">Enter login details</h4>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <label class="form-label">Username</label>
+            </div>
+            <div class="col-lg-8">
+              <input type="text" placeholder="Username" class="form-control">
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col-lg-4">
+              <label class="form-label">Password</label>
+            </div>
+            <div class="col-lg-8">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+          </div>
+          <button class="btn btn-success">Login</button>          
+        </div>
+      </div>
+    </div>
+   </div>
+   </header>
+<!-- navbar -->
+    <nav class="navbar navbar-expand-sm " style="background-color: #694e26;" data-bs-theme="dark">
+      <div class="container-fluid">
+        <!-- <div>
+        <a href="home.html" class="navbar-brand fs-5 fw-bold">Food & Fork</a>
+      </div> -->
+      <ul class="navbar-nav  w-100 justify-content-evenly"  >
+        <li class="me-2">
+          <a href="home.html" class="text-decoration-none text-white fs-4">Home</a>
+        </li>
+        <li class="me-2">
+          <a href="breakfast.html" class="text-decoration-none text-white fs-4">BreakFast</a>
+        </li>
+        <li class="me-2">
+          <a href="lunch.html" class="text-decoration-none text-white fs-4">Lunch</a>
+        </li class="me-2">
+        <li class="me-2">
+          <a href="dinner.html" class="text-decoration-none text-white fs-4">Dinner</a>
+        </li>
+        <li class="me-2">
+          <a href="dessert.html" class="text-decoration-none text-white fs-4" >Dessert</a>
+        </li>
+        <li class="me-2">
+          <a href="nutrition&fit.html" class="text-decoration-none text-white fs-4">Nutrition & Fit</a>
+        </li>
+        <li class="me-2">
+          <a href="popular.html" class="text-decoration-none text-white fs-4">Popular </a>
+        </li>
+        <li class="me-2">
+          <a href="seasonal.html" class="text-decoration-none text-white fs-4">Seasonal</a>
+        </li>
+      </ul>
+      </div>
+      <!-- <button class="navbar-toggler">
+              <span class="navbar-toggler-icon"></span>
+              <//button> -->
+
+    </nav>
+   
+
+
+
+
+    <!-- Recipe Cards -->
+<div id="items">
+       <div class="d-flex">
+     <div class="card shadow w-25 h-25  m-auto" >
+        <img src="images/poori.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Mango Shrikhand with Poori </h4>
+            <span class="text-secondary "> Sweet mango yogurt with fluffy fried bread </span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>20 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#poori" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+        <div class="card shadow w-25 h-100  m-auto" >
+        <img src="images/methi_thepla.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Methi Thepla </h4>
+            <span class="text-secondary ">Fenugreek-flavored flatbread .</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>25 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#thepla" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+     <div class="card shadow w-25 h-25  m-auto" >
+        <img src="images/Baingan_Bharta.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Baingan Bharta</h4>
+            <span class="text-secondary "> Smoky roasted eggplant mashed with spices.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>35 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#baingan" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+   </div>
+   <br><br><br>
+   <div class="d-flex">
+    <div class="card shadow w-25 h-25  m-auto" >
+        <img src="images/Aam Ras.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Aam Ras</h4>
+            <span class="text-secondary "> Sweet mango pulp .</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>10 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#aam" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25  m-auto" >
+        <img src="images/Pumpkin Halwa.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Pumpkin Halwa</h4>
+            <span class="text-secondary "> Sweet pumpkin dessert</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>30 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#pumphalwa" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+   
+   <div class="card shadow w-25 h-25  m-auto" >
+        <img src="images/Methi Paratha.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Methi Paratha + Curd</h4>
+            <span class="text-secondary "> Nutritious fenugreek flatbread for winter.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>25 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#methiparatha" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    </div>
+</div>
+    <!--Recipe Modal  -->
+     <div class="modal fade" id="poori">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Mango Shrikhand with Poori </h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Mango pulp</li><li>hung curd</li><li> sugar</li><li> cardamom</li><li>wheat flour</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Mix mango pulp & curd with sugar & cardamom</li><li> Make pooris from dough</li><li> Fry & serve with shrikhand</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="thepla">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Methi Thepla </h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Wheat flour </li><li>methi leaves</li><li> spices</li><li> curd</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Knead dough with methi & spices</li><li>  Roll theplas</li><li> Cook on tawa with oil</li><li> Serve with pickle</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="baingan">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Baingan Bharta</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Eggplant </li><li>Onion</li><li> Tomato</li><li>Green chili</li><li>Onion</li><li> Spices</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Roast eggplant</li><li>  Peel & mash</li><li> Sauté onion & tomato</li><li> Add spices & mash together</li><li>Cook 5 mins</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="pumpkin">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Pumpkin Sabzi with Roti </h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>  Pumpkin cubes</li><li> Onion</li><li> Chili</li><li>Spices</li><li>Wheat flour</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Sauté onion</li><li> Add pumpkin & spices</li><li> Cook till soft</li><li> Make rotis & serve</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="methiparatha">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Methi Paratha + Curd</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Wheat flour</li><li>methi leaves</li><li> curd</li><li> spices</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Mix methi & spices in dough</li><li> Roll parathas</li><li>  Cook on tawa</li><li>Serve with curd.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="aam">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Aam Ras</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>  Ripe mangoes</li><li>sugar</li><li> cardamom</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Blend mango pulp with sugar & cardamom</li><li> Chill & serve</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="pumphalwa">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Pumpkin Halwa</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Pumpkin</li><li>Sugar</li><li> Ghee</li><li> Cardamom</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Grate pumpkin</li><li>Cook with ghee & sugar till soft</li><li> Add cardamom</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+    
+</body>
+</html>

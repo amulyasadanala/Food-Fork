@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.css">
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="icon" href="images/fork-knife.svg" type="image/svg+xml">
+    <title>Lunch</title>
+</head>
+<style>
+    img{
+        width:377px;
+        height: 250px;
+    }
+    .card:hover{
+            transform: scale(1.1,1.1);
+            transition: all 0.3s linear;
+        }
+    .card{
+            overflow: hidden;
+        }
+        #logo{
+    font-size: 35px;
+    font-weight: bold;
+   }
+   #items {
+    margin-top: 40px;
+   }
+</style>
+<body>
+    <!-- header section -->
+   <header class="bg-warning text-white d-flex justify-content-between py-3 aligns-items-center ">
+    <div id="logo">
+      <p><i class="bi bi-fork-knife"></i> Fork & Fun</p>
+    </div>
+    <div>
+      <input type="search" placeholder="Search Recipe" class="px-2 py-2 fs-5 mt-2 rounded border-0">
+      <button class="btn bg-white btn-warning px-2 py-2 fs-5" data-bs-target="#loginmodal" data-bs-toggle="modal">Login</button>
+      <button class="btn bg-white btn-warning px-2 py-2 fs-5" >WishList</button>
+    </div>
+   
+   <div class="modal" id="loginmodal">
+    <div class="modal-dialog modal-dialog-center">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="text-primary">Enter login details</h4>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row align-items-center">
+            <div class="col-lg-4">
+              <label class="form-label">Username</label>
+            </div>
+            <div class="col-lg-8">
+              <input type="text" placeholder="Username" class="form-control">
+            </div>
+          </div>
+          <div class="row align-items-center mt-4">
+            <div class="col-lg-4">
+              <label class="form-label">Password</label>
+            </div>
+            <div class="col-lg-8">
+              <input type="password" placeholder="Password" class="form-control">
+            </div>
+          </div>
+          <button class="btn btn-success">Login</button>          
+        </div>
+      </div>
+    </div>
+   </div>
+   </header>
+<!-- navbar -->
+    <nav class="navbar navbar-expand-sm " style="background-color: #694e26;" data-bs-theme="dark">
+      <div class="container-fluid">
+        <!-- <div>
+        <a href="home.html" class="navbar-brand fs-5 fw-bold">Food & Fork</a>
+      </div> -->
+      <ul class="navbar-nav  w-100 justify-content-evenly"  >
+        <li class="me-2">
+          <a href="home.html" class="text-decoration-none text-white fs-4">Home</a>
+        </li>
+        <li class="me-2">
+          <a href="breakfast.html" class="text-decoration-none text-white fs-4">BreakFast</a>
+        </li>
+        <li class="me-2">
+          <a href="lunch.html" class="text-decoration-none text-white fs-4">Lunch</a>
+        </li class="me-2">
+        <li class="me-2">
+          <a href="dinner.html" class="text-decoration-none text-white fs-4">Dinner</a>
+        </li>
+        <li class="me-2">
+          <a href="dessert.html" class="text-decoration-none text-white fs-4" >Dessert</a>
+        </li>
+        <li class="me-2">
+          <a href="nutrition&fit.html" class="text-decoration-none text-white fs-4">Nutrition & Fit</a>
+        </li>
+        <li class="me-2">
+          <a href="popular.html" class="text-decoration-none text-white fs-4">Popular </a>
+        </li>
+        <li class="me-2">
+          <a href="seasonal.html" class="text-decoration-none text-white fs-4">Seasonal</a>
+        </li>
+      </ul>
+      </div>
+      <!-- <button class="navbar-toggler">
+              <span class="navbar-toggler-icon"></span>
+              <//button> -->
+
+    </nav>
+   
+    <!-- Recipe cards -->
+    <div id="items">
+        <div class="d-flex ">
+        <div class="card shadow w-25 h-100 mb-30 m-auto " >
+        <img src="images/daltadka.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Dal Tadka + Jeera Rice</h4>
+            <span class="text-secondary ">Yellow lentils with spices, served with cumin rice.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>30 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#tadka" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25 mb-30 m-auto" >
+        <img src="images/PaneerButterMasala_Roti.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Paneer Butter Masala + Roti</h4>
+            <span class="text-secondary "> Creamy tomato curry with cottage cheese.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>35 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#paneer" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25 mb-30 m-auto" >
+        <img src="images/Rajma_Chawal.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Rajma Chawal</h4>
+            <span class="text-secondary "> -Kidney beans curry with steamed rice.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>40 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#rajma" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    </div>
+    <br><br><br>
+    <div class="d-flex ">
+        <div class="card shadow w-25 h-100  m-auto" >
+        <img src="images/VegetablePulao with Raita.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Vegetable Pulao with Raita</h4>
+            <span class="text-secondary ">Fragrant rice cooked with mixed veggies.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>30 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#pulao" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25  m-auto" >
+        <img src="images/Baingan_Bharta.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Baingan Bharta</h4>
+            <span class="text-secondary "> Smoky roasted eggplant mashed with spices.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>35 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#baingan" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25  m-auto" >
+        <img src="images/Pumpkin Sabzi_Roti.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Pumpkin Sabzi + Roti </h4>
+            <span class="text-secondary "> Sweet & spicy pumpkin curry </span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>25 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#pumpkin" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    </div>
+    <br><br><br>
+    <div class="d-flex ">
+        <div class="card shadow w-25 h-100  m-auto" >
+        <img src="images/Quinoa_Khichdi.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Quinoa Khichdi </h4>
+            <span class="text-secondary ">Protein-packed quinoa with lentils & veggies.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>25 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#quinoa" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25  m-auto" >
+        <img src="images/Lauki_Chana_Dal.jpg" class="car-img-top">
+        <div class="card-body">
+            <h4>Lauki Chana Dal</h4>
+            <span class="text-secondary "> Bottle gourd cooked with Bengal gram.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>30 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#lauki" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    <div class="card shadow w-25 h-25  m-auto" >
+        <img src="images/Millet Vegetable Khichdi.jpg "class="car-img-top">
+        <div class="card-body">
+            <h4>Millet Vegetable Khichdi</h4>
+            <span class="text-secondary ">Fiber-rich millet with lentils & veggies.</span><br>
+            <span class="badge bg-warning text-dark mt-3"><i class="bi bi-hourglass-split"></i>30 mins</span>
+            <button class="btn btn-warning btn-sm float-end mt-3" data-bs-target="#millet" data-bs-toggle="modal">View Recipe </button>
+        </div>
+    </div>
+    </div>
+    </div>
+    <br><br><br>
+    
+    <!-- Recipe models -->
+     <div class="modal fade" id="tadka">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Dal Tadka + Jeera Rice</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Toor dal</li><li>Onion</li><li> tomato</li><li> Garlic</li><li> Ghee</li> <li>Cumin</li> <li> Rice</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Cook dal</li><li>  Make tadka with ghee & spices</li><li>Add to dal</li><li> Cook rice with cumin seeds</li><li>Serve</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+       <div class="modal fade" id="paneer">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Paneer Butter Masala + Roti</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>  Paneer</li><li>Tomato puree</li><li>Cream, butter</li><li> Spices</li><li> Wheat flour</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Cook tomato gravy with spices & cream</li><li> Add paneer & simmer</li><li> Make rotis from wheat dough</li><li> Serve together.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <div class="modal fade" id="rajma">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Rajma Chawal</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Soaked rajma</li><li>Boiled potatoes</li><li> Onion</li><li>Tomato</li><li>Ginger-garlic paste</li><li>Spices</li><li>Rice</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Pressure cook rajma</li><li> Sauté onion-tomato-spices</li><li>  Mix with rajma & simmer</li><li> Cook rice separately, serve.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+
+      <div class="modal fade" id="pulao">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Vegetable Pulao with Raita</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Basmati rice </li><li>Mixed veggies</li><li> Whole spices</li><li> Curd</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li> Sauté spices & veggies</li><li> Add rice & water</li><li> Cook till fluffy</li><li>  Serve with raita</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="baingan">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Baingan Bharta</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li> Eggplant </li><li>Onion</li><li> Tomato</li><li>Green chili</li><li>Onion</li><li> Spices</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Roast eggplant</li><li>  Peel & mash</li><li> Sauté onion & tomato</li><li> Add spices & mash together</li><li>Cook 5 mins</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="pumpkin">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Pumpkin Sabzi with Roti </h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>  Pumpkin cubes</li><li> Onion</li><li> Chili</li><li>Spices</li><li>Wheat flour</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Sauté onion</li><li> Add pumpkin & spices</li><li> Cook till soft</li><li> Make rotis & serve</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="quinoa">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Quinoa Khichdi </h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Quinoa </li><li>Moong dal</li><li> Veggies</li><li> Curry leaves</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Wash quinoa & dal</li><li>  Sauté veggies</li><li>Add water & cook till soft</li><li>Serve hot</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="lauki">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Lauki Chana Dal</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Bottle gourd</li><li>chana dal</li><li>  tomato</li><li> green chili</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Soak dal</li><li>  Cook with lauki & spices</li><li>Simmer till soft & serve</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="millet">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Millet Vegetable Khichdi</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Foxtail millet  </li><li>  moong dal</li><li> mixed veggies</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li>Sauté veggies</li><li> add millet & dal</li><li>  pressure cook till soft & Serve</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+     <div class="modal fade" id="pakora">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5>Kadhi Pakora + Rice</h5>
+                    <button class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Ingredients:</h6>
+                    <ul>
+                        <li>Yogurt </li><li> Besan</li><li>Spices</li><li> Rice</li>
+                    </ul>
+                    <h6>Steps:</h6>
+                    <ol>
+                        <li> Make yogurt-besan kadhi</li><li>   Fry pakoras</li><li>  Add to kadh & Simmer</li><li> Cook rice separately, serve</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+     </div>
+    
+</body>
+</html>
